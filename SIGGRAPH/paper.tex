@@ -1,0 +1,58 @@
+%\documentclass[annualconference]{acmsiggraph}
+%\documentclass[annual]{acmsiggraph} % new acmsiggraph.cls
+%\documentclass[preprint]{acmsiggraph}
+%\documentclass[review]{acmsiggraph}
+\NeedsTeXFormat{LaTeX2e}
+
+\input{package}
+\input{macros}
+
+\graphicspath{
+{figs/raster/}
+{figs/handdrawn/}
+}%graphicspath
+
+\TOGonlineid{papers\_0001} % new acmsiggraph.cls
+
+\TOGvolume{30}
+\TOGnumber{4}
+\TOGarticleDOI{1964921.1964957}
+
+\title{I am a Chocoholic!}
+
+\author{Harry Potter \and Hermione Granger \and Ron Weasley}
+\affiliation{Hogwarts School of Witchcraft and Wizardry}
+
+\pdfauthor{Li-Yi Wei} % new acmsiggraph.cls
+
+\keywords{computer graphics, human computer interaction}
+
+\begin{document}
+
+\maketitle
+
+\input{abstract}
+
+\keywordlist
+%\copyrightspace
+
+\input{introduction}
+
+\bibliographystyle{acmsiggraph}
+{
+\bibliography{paper}
+}
+
+\appendix
+\normalsize
+
+\ifthenelse{\equal{\final}{0}}
+{
+\cleardoublepage
+\pagenumbering{roman}
+
+\input{note}
+}
+{}
+
+\end{document}
