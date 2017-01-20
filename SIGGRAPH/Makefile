@@ -10,7 +10,7 @@ FINAL_SOURCES = final.tex $(PAPER_SOURCES)
 HAND_DIR = figs/handdrawn/
 RASTER_DIR = figs/raster/
 HAND_FIGS = 
-SVG_FIGS = $(HAND_DIR)/example.svg
+SVG_FIGS = $(wildcard $(HAND_DIR)/*.svg)
 RASTER_FIGS = $(RASTER_DIR)/161.jpg
 
 HAND_EPS = $(HAND_FIGS:.fig=.eps)
