@@ -1,20 +1,24 @@
 \begin{algorithm}
-  \Caption{Dart throwing algorithm.}{}
-  \label{alg:dart_throw}
   \begin{algorithmic}[1]
     \REQUIRE sample domain $\domainsym$ with distance $\dist$ and conflict $\conflictdist$ measure
     \ENSURE output sample set $\sampleset$
-    \STATE $fail \leftarrow 0$
-    \WHILE{$\domainsym$ is not fully covered and $fail$ not too high}
+    \STATE $\failure \leftarrow 0$ \pcomment{failure count}
+    \WHILE{$\domainsym$ is not fully covered and $\failure$ not too high}
     \STATE $\sample \leftarrow \funct{RandomSample}(\domainsym)$
-    \IF{$\dist(\sample, \sampleprime) < \conflictdist \; \forall \sampleprime \in \sampleset$}
+    \IF{$\dist(\sample, \sampleprime) < \conflictdist(\sample, \sampleprime) \; \forall \sampleprime \in \sampleset$}
     \STATE $\sampleset \leftarrow \sampleset \union \sample$ \pcomment{accept trial sample}
+    \STATE $\failure \leftarrow 0$
     \ELSE
-    \STATE $fail = fail + 1$
+    \STATE $\failure = \failure + 1$
     \ENDIF
     \ENDWHILE
     \RETURN{} $\sampleset$
   \end{algorithmic}
+  \Caption{Dart throwing.}
+  {%
+This is an example of pseudo-code.
+  }
+  \label{alg:dart_throw}
 \end{algorithm}
 
 
