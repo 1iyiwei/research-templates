@@ -1,0 +1,51 @@
+
+\input{package}
+\input{macros}
+\input{symbols}
+\input{graphicspath}
+\input{tog}
+
+\begin{document}
+
+\title{Using Paper Drafts to Manage Research Projects}
+
+\author{Harry Potter}
+\author{Hermione Granger}
+\author{Ron Weasley}
+\affiliation{Hogwarts School of Witchcraft and Wizardry}
+
+\input{copyright}
+
+\input{abstract}
+
+\input{ccs}
+
+\keywords{research}
+
+\maketitle
+
+\input{introduction}
+\input{prior}
+\input{interface}
+\input{method}
+\input{result}
+\input{conclusion}
+
+\bibliographystyle{acmart}
+{
+\bibliography{paper}
+}
+
+\appendix
+\normalsize
+
+\ifthenelse{\equal{\final}{0}}
+{
+\cleardoublepage
+\pagenumbering{roman}
+
+\input{note}
+}
+{}
+
+\end{document}
