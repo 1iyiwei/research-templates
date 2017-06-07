@@ -79,4 +79,14 @@
 
 \newcommand{\filename}[1]{\url{#1}}
 \newcommand{\foldername}[1]{\url{#1}}
-%\newcommand{\email}[1]{\url{#1}}
+
+\let\oldparagraph\paragraph
+\newcommand{\passage}[1]{\oldparagraph{\textbf{#1}}}
+\renewcommand{\paragraph}[1]{\oldparagraph{\textbf{#1}.}} % \liyi{keep/remove that end period depending on whether you want a paragraph title to end with a period}
+
+\newcommand{\command}[1]{{\color{black}{\tt #1}}}
+
+\ifdefined\email
+\else
+\newcommand{\email}[1]{\url{#1}}
+\fi
