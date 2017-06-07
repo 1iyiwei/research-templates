@@ -1,0 +1,42 @@
+%\usepackage[draft]{hyperref} % new acmsiggraph.cls
+\usepackage{ifthen}
+\usepackage[export]{adjustbox}
+\usepackage{alltt}
+\usepackage{mathenv}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\ifdefined\sigchi
+\else
+\usepackage{amsthm}
+\fi
+%\usepackage{rotating}
+\usepackage{newlfont} % for Box
+%\usepackage{ulem}
+\usepackage{floatflt}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{fixltx2e}
+%\usepackage{subcaption} % \liyi{Don't use subfigure; it is obsolete; use subfloat instead.}
+\usepackage{subfig} % for subfloat
+\usepackage{multirow}
+\usepackage{CJKutf8} % Chinese
+\usepackage{booktabs}
+%\usepackage{media9} % embed video
+
+%\DeclareCaptionType{copyrightbox} % to fix the "Package caption Error: No float type 'copyrightbox' defined."
+\ifdefined\uist
+\usepackage[pdftex]{graphicx}
+\usepackage{parskip}
+\usepackage[draft]{hyperref}
+\usepackage{uist}
+\fi
+
+\ifdefined\sigchi
+\usepackage{parskip}
+\usepackage{url}      % llt: nicely formatted URLs
+\input{chi_macros}
+\else
+\fi
+
+\usepackage{cleveref}

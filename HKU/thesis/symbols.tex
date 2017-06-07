@@ -1,0 +1,158 @@
+%%%% institution
+\newcommand{\hku}{Univ. Hong Kong}
+
+%%%% texture
+\newcommand{\textureenergyf}[0]{E}
+\newcommand{\otherenergyf}[0]{\Theta}
+\newcommand{\inputsample}{\sample_{i}}
+\newcommand{\outputsample}{\sample_{o}}
+
+%\newcommand{\timesition}{\mathbf{t}} %time
+
+\newcommand{\payload}{\mathbf{q}}
+
+\newcommand{\outputSet}[0]{\mathcal{O}}
+\newcommand{\outputSubset}[0]{\outputSet{}^\dagger}
+\newcommand{\inputSet}[0]{\mathcal{I}}
+\newcommand{\outputSym}[0]{\mathcal{O}}
+\newcommand{\inputSym}[0]{\mathcal{I}}
+\renewcommand{\outputSubset}[0]{\outputSym{}}
+
+\newcommand{\controlSym}[0]{\mathcal{C}}
+\newcommand{\inputControlSym}[0]{\mathcal{C}^i}
+\newcommand{\outputControlSym}[0]{\mathcal{C}^o}
+
+% DET stuff
+\newcommand{\element}{\sample}
+\newcommand{\inputelement}{\element_{i}}
+\newcommand{\outputelement}{\element_{o}}
+\newcommand{\splatkernel}{\mathrm{\kappa}}
+\newcommand{\filterkernel}{\splatkernel}
+
+
+%sample representation
+\newcommand{\sample}{s}
+\newcommand{\op}{op}
+\newcommand{\cop}{cop}
+\newcommand{\point}{p}
+\newcommand{\position}{\mathbf{p}}
+\newcommand{\shape}{\mathbf{p}}
+\newcommand{\orientation}{\mathbf{o}}
+\newcommand{\motion}{\mathbf{m}}
+\newcommand{\appearance}{\mathbf{a}}
+\newcommand{\workflowtime}{\mathbf{t}}
+\newcommand{\velocity}{\mathbf{v}}
+\newcommand{\timesition}{t} %Do not use mathbf because time is not a vector.
+\newcommand{\diff}[1]{\widehat{#1}}
+\newcommand{\diffshape}{\diff{\shape}}
+\newcommand{\diffmotion}{\diff{\motion}}
+\newcommand{\diffappearance}{\diff{\appearance}}
+\newcommand{\diffworkflowtime}{\diff{\workflowtime}}
+\newcommand{\positiontime}{\mathbf{u}}
+\newcommand{\diffpositiontime}{\diff{\positiontime}}
+
+
+%energy brush
+\newcommand{\constraints}{\mathbf{c}}
+\newcommand{\flowparticle}{q}
+\newcommand{\velocityfield}{\mathbf{F}}
+\newcommand{\velocityfieldnorm}{\mathbf{f}}
+\newcommand{\sizecontrol}{r}
+\newcommand{\strengthcontrol}{e}
+\newcommand{\previous}[1]{\primeone{#1}}
+
+\newcommand{\globalid}{\mathbf{gt}}
+\newcommand{\localid}{\mathbf{lt}}
+
+\newcommand{\colorweight}{\alpha}
+\newcommand{\timeweight}{\beta}
+\newcommand{\motionweight}{\gamma}
+
+\newcommand{\varsample}{\varsigma} % alternative symbol for $\sample$ to avoid ambiguity
+\newcommand{\unionop}{\bigcup}
+
+%neighborhood
+\newcommand{\neighborhood}{\mathbf{n}}
+\newcommand{\diffneighborhood}{\widehat{\neighborhood}}
+\newcommand{\neighborhoodinter}{\mathbf{n_b}}
+\newcommand{\neighborhoodintra}{\mathbf{n_a}}
+\newcommand{\neighborhoodcontext}{\mathbf{n_c}}
+
+\newcommand{\neighborhoodsize}{r}
+\newcommand{\neighborhoodparameter}{\mathbf{c}}
+
+
+\newcommand{\sampledis}{\mathbf{d}}
+\newcommand{\sampledisparam}{\sigma}
+\newcommand{\sampledevparam}{\sigma_{1}}
+
+\newcommand{\contextparameter}{\mathbf{c}}
+\newcommand{\contextstructure}{\mathbf{cs}}
+\newcommand{\contextposition}{\mathbf{cp}}
+\newcommand{\contextdirection}{\mathbf{cd}}
+\newcommand{\contextappearance}{\mathbf{ca}}
+\newcommand{\contextneighborhood}{\mathbf{cn}}
+\newcommand{\contextmode}{\mathbf{cm}}
+
+\newcommand{\predictionquality}{\mathbf{Q}}
+
+\newcommand{\hintmode}{{\em hint}}
+\newcommand{\automode}{{\em auto}}
+\newcommand{\nobrushmode}{{\em no brush}}
+\newcommand{\ctrlmode}{{\em clone}}
+\newcommand{\fullmode}{{\em full}} % full manual
+\newcommand{\ourmode}{{\em our}} % hint + auto
+
+
+\newcommand{\probability}{\Pi}
+\newcommand{\localsimilarity}{\pi}
+\newcommand{\similarity}{\sigma}
+
+%%%deformation
+\newcommand{\deform}[1]{\widetilde{#1}}
+
+\newcommand{\rotation}{\mathbf{A}}
+\newcommand{\rotationelement}{a}
+\newcommand{\translation}{\mathbf{\delta}} % \liyi{t is already used for time}
+\newcommand{\rotatecenter}{\mathbf{g}}
+
+\newcommand{\deformationenergy}[0]{E}
+\newcommand{\deformationenergyrigid}{\deformationenergy_{r}}
+\newcommand{\deformationenergysmooth}{\deformationenergy_{s}}
+\newcommand{\deformationenergymotion}{\deformationenergy_{m}}
+\newcommand{\deformationenergyfit}{\deformationenergy_{f}}
+
+\newcommand{\deformationweight}{\kappa} % \liyi{$\alpha$ is already used!}
+\newcommand{\deformationweightrigid}{\deformationweight_{r}}
+\newcommand{\deformationweightsmooth}{\deformationweight_{s}}
+\newcommand{\deformationweightmotion}{\deformationweight_{m}}
+\newcommand{\deformationweightfit}{\deformationweight_{f}}
+
+
+
+%\newcommand{\rotationpenalty}{\mathbf{Rot}} %\liyi{don't use such a long and bold face symbol for a simple scalar quantity}
+\newcommand{\rotationpenalty}{\gamma}
+
+\newcommand{\primeone}[1]{#1'} %\liyi{{\em ,} is a punctuation so do not use it for math symbol}
+\newcommand{\primetwo}[1]{#1''}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\newcommand{\expfunc}[1]{\mathbf{e}^{#1}}
+\newcommand{\expfunc}[1]{\exp\left(#1\right)}
+\newcommand{\std}{\mathrm{std}}
+
+\newcommand{\frameconsistence}{\theta}
+\newcommand{\deformationsmoothconsistence}{\theta_{1}}
+\newcommand{\deformationtranslationconsistence}{\theta_{2}}
+\newcommand{\deformationrotationconsistence}{\theta_{3}}
+\newcommand{\deformationrotationconsistenceweight}{\varphi_{1}}
+\newcommand{\correspondencevariationweight}{\theta_{4}}
+\newcommand{\correspondencebalanceweight}{\varphi_{2}}
+
+
+\newcommand{\currentframe}[1]{{#1}}
+\newcommand{\previousframe}[1]{\primeone{#1}}
+\newcommand{\prepreviousframe}[1]{\primetwo{#1}}
+
+\newcommand{\matchinggraph}{\Phi}
