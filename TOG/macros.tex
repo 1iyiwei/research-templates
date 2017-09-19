@@ -81,8 +81,14 @@
 \newcommand{\foldername}[1]{\url{#1}}
 
 \let\oldparagraph\paragraph
+\iffalse
 \newcommand{\passage}[1]{\oldparagraph{\textbf{#1}}}
 \renewcommand{\paragraph}[1]{\oldparagraph{\textbf{#1}.}} % \liyi{keep/remove that end period depending on whether you want a paragraph title to end with a period}
+\else
+% \liyi{no boldface from Spencer}
+\newcommand{\passage}[1]{\oldparagraph{{#1}}}
+\renewcommand{\paragraph}[1]{\oldparagraph{{#1}.}}
+\fi
 
 \newcommand{\command}[1]{{\color{black}{\tt #1}}}
 
