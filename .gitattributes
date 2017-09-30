@@ -3,9 +3,16 @@
 
 # Explicitly declare text files you want to always be normalized and converted
 # to native line endings on checkout.
+*.hpp text
+*.cpp text
+*.py text
+*.sh text
+*.txt text
 *.tex text
 *.bib text
 *.svg text
+*.cmake text
+*.bat text
 Makefile text
 
 # Declare files that will always have CRLF line endings on checkout.
