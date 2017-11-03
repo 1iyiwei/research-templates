@@ -6,4 +6,11 @@ cd build
 ..\src\cnmake.bat ..\src
 nmake
 ```
- 
+
+Or:
+```
+cd build
+cmake ..\src
+cmake --build . --config Release
+```
+  
