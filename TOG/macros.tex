@@ -34,6 +34,8 @@
 \SetAlCapHSkip{0pt}
 \IncMargin{-\parindent}
 \newcommand{\Caption}[2]{\caption[#1]{{\em #1} #2}}
+\let\oldcaption\caption
+\renewcommand{\caption}[2][]{\oldcaption[#1]{{\em #1} #2}}
 
 \newcommand{\invisible}[1]{{\color{white} #1}}
 \newcommand{\emacsquote}[1]{{``#1''}}
